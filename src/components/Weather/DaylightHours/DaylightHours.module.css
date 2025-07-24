@@ -1,0 +1,119 @@
+.main {
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px;
+  color: #000;
+  padding: 0px 20px 0px 20px;
+  background: aliceblue;
+  transition: all 1s;
+}
+.mainNight {
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px #ffffff;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  transition: all 1s;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: relative;
+  bottom: 40px;
+  padding: 0px 20px 0px 20px;
+  color: #000;
+}
+
+.sunIcon0 {
+  width: 50px;
+  position: relative;
+  top: 148px;
+  z-index: 1;
+  left: 20px;
+}
+
+.sunIcon25 {
+  width: 50px;
+  position: relative;
+  left: 48px;
+  top: 85px;
+  z-index: 1;
+}
+
+.sunIcon50 {
+  width: 50px;
+  position: relative;
+  left: 116px;
+  top: 58px;
+  z-index: 1;
+}
+
+.sunIcon75 {
+  width: 50px;
+  position: relative;
+  left: 190px;
+  top: 85px;
+  z-index: 1;
+}
+
+.sunIcon100 {
+  width: 50px;
+  position: relative;
+  left: 219px;
+  top: 148px;
+  z-index: 1;
+}
+
+.none {
+  width: 50px;
+  position: relative;
+  left: 118px;
+  top: 177px;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.sunArc {
+  position: relative;
+  top: -10px;
+  left: -78px;
+  width: 330px;
+  height: 150px;
+  z-index: 0;
+}
+
+.textContent {
+  display: flex;
+  position: relative;
+  bottom: 60px;
+  justify-content: space-between;
+}
+
+.content {
+  font-size: 24px;
+  position: relative;
+  bottom: 50px;
+}
+
+.textBold {
+  font-weight: bold;
+  /* font-size: 16px; */
+}
+.timeText {
+  width: auto;
+}
+
+@media (max-width: 426px) {
+  .main {
+    padding: 0px;
+  }
+  .mainNight {
+    padding: 0px;
+  }
+  .textContent {
+    display: flex;
+    position: relative;
+    bottom: 40px;
+    justify-content: space-around;
+  }
+}

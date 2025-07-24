@@ -13,7 +13,7 @@ function App() {
   return (
     <Routes>
       <Route path={routes.main} element={<MainPage />} />
-      <Route path={routes.main} element={<WeatherPage />} />
+      <Route path={routes.weather} element={<WeatherPage />} />
 
     </Routes>
   );

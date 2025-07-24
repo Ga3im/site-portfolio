@@ -1,43 +1,70 @@
-import { useEffect, useState } from "react";
-import s from "./Weather.module.css";
-import { Header } from "../Header/Header";
-import { Main } from "../Main/Main";
-import { WeatherDays } from "../WeatherForFewDays/WeaherDays";
-import { Footer } from "../Footer/Footer";
-import { getWeather, getWeatherFiveDay } from "../../api/api";
+import { useEffect, useState, type SetStateAction } from 'react';
+import s from './Weather.module.css';
+import { Main } from '../Main/Main';
+import { Footer } from '../Footer/Footer';
+import { getWeather, getWeatherFiveDay } from '../../../services/api';
+import { WeatherHeader } from '../WeatherHeader/WeatherHeader';
+import { WeatherDays } from '../WeatherForFewDays/WeaherDays';
+
+export type dataType = {
+  main: {
+    temp: number;
+    feels_like: number;
+    humidity: number;
+  };
+  sys: {
+    sunrise: number;
+    sunset: number;
+  };
+  name: string;
+  weather: {
+    0: {
+      icon: string;
+    };
+  };
+  wind: {
+    speed: number;
+    deg: number;
+  };
+  timezone: number;
+  dt_txt?: number;
+  dt?: number;
+};
 
 export const Weather = () => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<dataType>({
     main: {
       temp: 293.15,
       feels_like: 293.15,
       humidity: 50,
     },
     sys: {
-      sunrise: "",
-      sunset: "",
+      sunrise: 0,
+      sunset: 0,
     },
-    name: "",
+    name: '',
     weather: {
       0: {
-        icon: "",
+        icon: '',
       },
     },
     wind: {
       speed: 1,
-      deg: "",
+      deg: 0,
     },
     timezone: 18000,
   });
-  const [cityName, setCityName] = useState("Ufa");
-  const [forecast, setForecast] = useState([]);
-  let [nightTheme, setNightTheme] = useState(false);
-  const [err, setErr] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [weatherDaysLoading, setWeatherDaysLoading] = useState(false);
+
+  const [cityName, setCityName] = useState<string>('Ufa');
+  const [forecast, setForecast] = useState<dataType[]>([]);
+  let [nightTheme, setNightTheme] = useState<boolean>(false);
+  const [err, setErr] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [weatherDaysLoading, setWeatherDaysLoading] =
+    useState<SetStateAction<boolean>>(false);
 
   setTimeout(() => {
-    setErr("");
+    setErr('');
   }, 5000);
 
   useEffect(() => {
@@ -48,8 +75,8 @@ export const Weather = () => {
       })
       .then((res) => {
         if (
-          new Date(res ? res.sys.sunrise * 1000 : "") <= new Date() &&
-          new Date() <= new Date(res ? res.sys.sunset * 1000 : "")
+          new Date(res ? res.sys.sunrise * 1000 : '') <= new Date() &&
+          new Date() <= new Date(res ? res.sys.sunset * 1000 : '')
         ) {
           setNightTheme(false);
         } else {
@@ -65,15 +92,16 @@ export const Weather = () => {
     setWeatherDaysLoading(true);
     getWeatherFiveDay(cityName)
       .then((res) => {
+        console.log(res);
         setForecast(
-          res.list.filter((i) => {
-            let hour = new Date(i.dt_txt).getHours();
+          res.list.filter((i: dataType) => {
+            let hour: number | Date = new Date(i.dt_txt).getHours();
             if (new Date(i.dt_txt) > new Date()) {
               if (hour === 3 || hour === 9 || hour === 15 || hour === 21) {
                 return i;
               }
             }
-          })
+          }),
         );
         setWeatherDaysLoading(false);
       })
@@ -85,7 +113,7 @@ export const Weather = () => {
 
   return (
     <div className={nightTheme ? s.wrapperNight : s.wrapper}>
-      <Header
+      <WeatherHeader
         isLoading={isLoading}
         setIsLoading={setIsLoading}
         cityName={cityName}
@@ -95,7 +123,6 @@ export const Weather = () => {
         data={data}
         setData={setData}
         setForecast={setForecast}
-        err={err}
         setErr={setErr}
       />
       {err && (
@@ -103,13 +130,7 @@ export const Weather = () => {
           <p className={s.errorMessage}>{err}</p>
         </div>
       )}
-      <Main
-        setNightTheme={setNightTheme}
-        nightTheme={nightTheme}
-        data={data}
-        setData={setData}
-        cityName={cityName}
-      />
+      <Main nightTheme={nightTheme} data={data} />
       {weatherDaysLoading ? (
         <div className={s.weatherDaysLoading}>Загрузка...</div>
       ) : (

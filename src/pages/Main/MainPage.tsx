@@ -6,7 +6,7 @@ export const MainPage = () => {
   return (
     <>
       <Header />
-      <div className={'center'}>
+      <div className={s.center}>
         <div className={s.container}>
           <div className={s.leftColumn}>
             <h1>Акбутин Газим</h1>

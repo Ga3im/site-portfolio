@@ -1,34 +1,49 @@
 import S from "./DaylightHours.module.css";
 
-export const DaylightHours = ({ sunrise, sunset, nightTheme, timezone }) => {
-  const daylightHours = (sunriseData, sunsetData) => {
-    let rise = new Date(sunriseData * 1000);
-    let set = new Date(sunsetData * 1000);
-    let hour = Math.abs(rise.getHours() - set.getHours());
-    let minutes = Math.abs(rise.getMinutes() - set.getMinutes());
+type propDayLightType = {
+  sunrise: number;
+  sunset: number;
+  nightTheme: boolean;
+  timezone: number;
+};
+
+export const DaylightHours = ({
+  sunrise,
+  sunset,
+  nightTheme,
+  timezone,
+}: propDayLightType) => {
+  const daylightHours = (sunriseData: number, sunsetData: number): string => {
+    let rise: number | Date = new Date(sunriseData * 1000);
+    let set: number | Date = new Date(sunsetData * 1000);
+    let hour: number = Math.abs(rise.getHours() - set.getHours());
+    let minutes: number = Math.abs(rise.getMinutes() - set.getMinutes());
     return `${hour}:${minutes < 10 ? "0" + minutes : minutes}`;
   };
 
-  let currentUTCHour = new Date().getUTCHours() + timezone / 3600;
-  const dinamicSun = () => {
-    let riseHour =
+  let currentUTCHour: number | Date =
+    new Date().getUTCHours() + timezone / 3600;
+
+  const dinamicSun = (): string => {
+    let riseHour: number | Date =
       new Date(sunrise * 1000).getUTCHours() + timezone / 3600 > 24
         ? new Date(sunrise * 1000).getUTCHours() + timezone / 3600 - 24
         : new Date(sunrise * 1000).getUTCHours() + timezone / 3600;
 
-    let setHour = new Date(sunset * 1000).getUTCHours() + timezone / 3600;
-    let hour = Math.abs(riseHour - setHour);
-    let DL0 = riseHour + 1 >= currentUTCHour;
-    let DL1 =
+    let setHour: number | Date =
+      new Date(sunset * 1000).getUTCHours() + timezone / 3600;
+    let hour: number = Math.abs(riseHour - setHour);
+    let DL0: boolean = riseHour + 1 >= currentUTCHour;
+    let DL1: boolean =
       riseHour <= currentUTCHour && riseHour + hour / 4 >= currentUTCHour;
-    let DL2 =
+    let DL2: boolean =
       riseHour + hour / 4 <= currentUTCHour &&
       riseHour + hour / 2 >= currentUTCHour;
 
-    let DL3 =
+    let DL3: boolean =
       riseHour + hour / 2 <= currentUTCHour &&
       riseHour + (3 * hour) / 4 >= currentUTCHour;
-    let DL4 =
+    let DL4: boolean =
       riseHour + (3 * hour) / 4 <= currentUTCHour &&
       riseHour + hour + 1 >= currentUTCHour;
 

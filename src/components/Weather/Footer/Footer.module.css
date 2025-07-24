@@ -1,0 +1,21 @@
+.footerBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8da58d;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footerBg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8da58d;
+    height: 40px;
+    font-size: 10px;
+  }
+  .footerText {
+    font-size: 10px;
+  }
+}
