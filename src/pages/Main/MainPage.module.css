@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+}
+
+.leftColumn {
+  background-color: #f3f3f3;
+  padding: 24px;
+  width: 25%;
+}
+
+.portfolioContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.portfolioContent:hover {
+  cursor: pointer;
+
+  .contactLink {
+    text-decoration: underline;
+  }
+}
+
+.hhIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.telegramIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.contactLink {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.contactLink:hover {
+  text-decoration: underline;
+}
+
+.rightColumn {
+  background-color: #dedede;
+  width: 75%;
+}

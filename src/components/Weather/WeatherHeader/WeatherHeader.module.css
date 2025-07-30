@@ -1,0 +1,294 @@
+.header {
+  background: linear-gradient(180deg, #ffffff, #19bfff);
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nightHeader {
+  background: linear-gradient(180deg, #36396e, #a0a387);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 146px;
+  height: 36px;
+  cursor: pointer;
+  background-image: url(/public/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+
+.cityName {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 26px;
+}
+
+.locationImg {
+  width: 45px;
+  height: 45px;
+  padding-left: 35px;
+}
+
+.cityNameBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cityNameText {
+  font-size: 24px;
+}
+
+.timezoneText {
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.inputContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+}
+
+.inputCityName {
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.inputCityName:focus::placeholder {
+  color: transparent;
+}
+.inputCityNameNight {
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #756868;
+  color: #fff;
+}
+.inputCityNameNight:focus::placeholder {
+  color: transparent;
+}
+.inputCityNameNight::placeholder {
+  color: #fff;
+}
+
+.searchButton {
+  height: 50px;
+  width: 55px;
+  border-radius: 5px;
+  font-size: 28px;
+  transition: all 0.3s;
+}
+.searchButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.searchButtonNight {
+  height: 50px;
+  width: 55px;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: #fff;
+  background: #756868;
+  font-size: 28px;
+  transition: all 0.3s;
+}
+.searchButtonNight:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px #fff;
+  transform: scale(1.05);
+}
+
+
+.nightTheme {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.icon {
+  width: 20px;
+}
+
+.checkbox {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #949490;
+  transition: 0.5s;
+}
+.checkbox:checked {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox:checked::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+  transition: 0.5s;
+}
+
+@media (min-width: 1225px) and (max-width: 1424px) {
+  .cityName {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1224px) {
+  .cityName {
+    font-size: 14px;
+  }
+  .nightTheme {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .locationImg {
+    width: 20px;
+    height: 20px;
+    padding-left: 15px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    height: 40px;
+  }
+  .inputCityName {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .inputCityNameNight {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .searchButton {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .searchButtonNight {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    height: 100px;
+    flex-direction: column;
+  }
+  .nightHeader {
+    flex-direction: column;
+    height: 100px;
+  }
+  .logo {
+    display: none;
+  }
+  .cityName {
+    position: relative;
+    right: 110px;
+    bottom: 15px;
+  }
+  .timezoneText {
+    font-size: 16px;
+  }
+  .inputContent {
+    position: relative;
+    bottom: 30px;
+  }
+  .form {
+    height: 40px;
+  }
+  .inputCityName {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .inputCityNameNight {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .searchButton {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .searchButtonNight {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .nightTheme {
+    position: relative;
+    bottom: 106px;
+    left: 160px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}

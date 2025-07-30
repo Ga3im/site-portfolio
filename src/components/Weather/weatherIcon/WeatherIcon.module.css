@@ -1,0 +1,16 @@
+.icon {
+  height: 70px;
+  padding: 10px;
+}
+
+@media (max-width: 1025px) {
+  .icon {
+    height: 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .icon {
+    height: 60px;
+  }
+}

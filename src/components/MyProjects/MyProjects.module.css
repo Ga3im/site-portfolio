@@ -1,0 +1,71 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+
+.projects {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.iconPosition {
+  display: flex;
+  gap: 20px;
+  border-bottom: solid 2px;
+  transition: all 0.3s;
+}
+.iconPosition:hover {
+  background: aliceblue;
+  border-radius: 5px;
+  border-bottom: solid 2px #00ff27;
+  transform: scale(1.05);
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding-bottom: 10px;
+}
+
+.iconImg {
+  top: 10px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  border: solid 7px green;
+  top: 20px;
+  position: relative;
+  box-shadow: inset 0px 0px 10px 1px;
+  border-radius: 100%;
+}
+
+.siteName {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.siteUrl {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.urlText {
+  padding-left: 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  transition: all 0.3s;
+  font-weight: normal;
+}
+.urlText:hover {
+  text-decoration: underline;
+}

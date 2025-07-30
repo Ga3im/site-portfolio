@@ -1,0 +1,49 @@
+@keyframes modalOpening {
+  from {
+    width: 0px;
+    height: 100vh;
+    background-color: #363636;
+  }
+
+  to {
+    height: 100vh;
+    width: 400px;
+    background-color: #363636;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  height: 50px;
+  background: radial-gradient(#4e83e7, #ffffffb3);
+  border: solid 2px #4e83e7;
+  box-shadow: inset 0px 0px 25px 0px #4e83e7;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: all 0.3s;
+}
+.menu:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.menuItem {
+  border-bottom: solid 1px #000;
+  width: 20px;
+  border-radius: 2px;
+}
+
+.modal {
+  position: absolute;
+  height: 100vh;
+  width: 400px;
+  background-color: #363636;
+  animation-duration: 0.5s;
+  animation-name: modalOpening;
+}
