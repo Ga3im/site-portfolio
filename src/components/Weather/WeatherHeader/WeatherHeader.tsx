@@ -99,7 +99,7 @@ export const WeatherHeader = ({
         <div className={nightTheme ? S.nightHeader : S.header}>
           <div className={S.logo}></div>
           <div className={S.cityName}>
-            <img className={S.locationImg} src="location.png" alt="" />
+            <img className={S.locationImg} src="/location.png" alt="" />
             <div className={S.cityNameBlock}>
               <p className={S.cityNameText}>{data.name}</p>{' '}
               <span className={S.timezoneText}>({timezone()} UTC)</span>
