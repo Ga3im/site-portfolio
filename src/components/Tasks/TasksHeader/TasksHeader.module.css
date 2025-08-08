@@ -1,0 +1,143 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.wrapperDark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.logo {
+  padding-left: 50px;
+  width: 90px;
+  cursor: pointer;
+}
+
+.addTask {
+  font-size: 16px;
+  padding: 5px 15px;
+  background: #b3ffc0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addTask:hover {
+  transform: scale(1.05);
+}
+
+.navbutton {
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.navitems {
+  width: 23px;
+  height: 4px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  background-color: #555555;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  background: #ababab;
+  width: 200px;
+  padding: 20px;
+  border: solid black 1px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0px;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.darkTheme {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.checkbox {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #949490;
+  transition: 0.5s;
+}
+
+.checkbox:checked {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox:checked::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+  transition: 0.5s;
+}
+
+.userInfo {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s;
+}
+.userInfo:hover {
+  transform: scale(1.05);
+}
+
+.archive {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.archive:hover {
+  transform: scale(1.05);
+}
+
+.authButton {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.authButton:hover {
+  transform: scale(1.05);
+}

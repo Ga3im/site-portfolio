@@ -12,18 +12,18 @@
   background: radial-gradient(#499aff, #ffffff);
   animation-name: nightTheme;
   animation-duration: 1s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: 50px;
 }
 
 .wrapperNight {
   background: radial-gradient(#767676, #101010);
   animation-name: nightTheme;
   animation-duration: 1s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: 50px;
 }
 .error {
   color: red;
@@ -43,4 +43,844 @@
   text-align: center;
   padding: 100px;
   font-size: 32px;
+}
+
+/* хидр  */
+.header {
+  background: linear-gradient(180deg, #ffffff, #19bfff);
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nightHeader {
+  background: linear-gradient(180deg, #36396e, #a0a387);
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 146px;
+  height: 36px;
+  cursor: pointer;
+  background-image: url(/public/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+}
+
+.cityName {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 26px;
+}
+
+.locationImg {
+  width: 45px;
+  height: 45px;
+  padding-left: 35px;
+}
+
+.cityNameBlock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cityNameText {
+  font-size: 24px;
+}
+
+.timezoneText {
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.inputContentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+}
+
+.inputCityNameHeader {
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.inputCityNameHeader:focus::placeholder {
+  color: transparent;
+}
+.inputCityNameHeaderNight {
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #756868;
+  color: #fff;
+}
+.inputCityNameHeaderNight:focus::placeholder {
+  color: transparent;
+}
+.inputCityNameHeaderNight::placeholder {
+  color: #fff;
+}
+
+.searchButtonHeader {
+  height: 50px;
+  width: 55px;
+  border-radius: 5px;
+  font-size: 28px;
+  transition: all 0.3s;
+}
+.searchButtonHeader:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 5px 0px;
+}
+
+.searchButtonHeaderNight {
+  height: 50px;
+  width: 55px;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: #fff;
+  background: #756868;
+  font-size: 28px;
+  transition: all 0.3s;
+}
+.searchButtonHeaderNight:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px #fff;
+  transform: scale(1.05);
+}
+
+.nightTheme {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.iconHeader {
+  width: 20px;
+}
+
+.checkbox {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #949490;
+  transition: 0.5s;
+}
+.checkbox:checked {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 100px;
+  background: #eaeef6;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox:checked::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: blue;
+  transition: 0.5s;
+}
+
+@media (min-width: 1225px) and (max-width: 1424px) {
+  .cityName {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1224px) {
+  .cityName {
+    font-size: 14px;
+  }
+  .nightTheme {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .locationImg {
+    width: 20px;
+    height: 20px;
+    padding-left: 15px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    height: 40px;
+  }
+  .inputCityNameHeader {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .inputCityNameHeaderNight {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .searchButtonHeader {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .searchButtonHeaderNight {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    height: 100px;
+    flex-direction: column;
+  }
+  .nightHeader {
+    flex-direction: column;
+    height: 100px;
+  }
+  .logo {
+    display: none;
+  }
+  .cityName {
+    position: relative;
+    right: 110px;
+    bottom: 15px;
+  }
+  .timezoneText {
+    font-size: 16px;
+  }
+  .inputContent {
+    position: relative;
+    bottom: 30px;
+  }
+  .form {
+    height: 40px;
+  }
+  .inputCityNameHeader {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .inputCityNameHeaderNight {
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0px 4px;
+  }
+  .searchButtonHeader {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .searchButtonHeaderNight {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .nightTheme {
+    position: relative;
+    bottom: 106px;
+    left: 160px;
+  }
+  .textNightTheme {
+    display: none;
+  }
+}
+
+/* main */
+.icon {
+  width: 150px;
+}
+
+.main {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.mainNight {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.error {
+  font-size: 25px;
+  color: red;
+  margin-top: 0px;
+}
+
+.noneError {
+  position: absolute;
+}
+
+.inputContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputCityName {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.inputCityNameNight {
+  background: #756868;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.inputCityNameNight::placeholder {
+  color: #fff;
+}
+
+.searchButton {
+  height: 37px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.searchButtonNight {
+  height: 37px;
+  width: 40px;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: #fff;
+  background: #756868;
+}
+
+.currentDayInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 30px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.positioningInfo {
+  background: aliceblue;
+  display: flex;
+  font-size: 40px;
+  gap: 140px;
+  align-items: center;
+  padding: 30px 70px;
+  border-radius: 18px;
+  color: #000;
+  box-shadow: 0px 0px 10px 1px;
+  transition: all 1s;
+}
+
+.positioningInfoNight {
+  display: flex;
+  font-size: 40px;
+  color: #fff;
+  gap: 140px;
+  align-items: center;
+  padding: 30px 70px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 10px 1px #ffffff;
+  transition: all 1s;
+}
+
+.textNow {
+  height: 10px;
+}
+
+.todayDay {
+  font-size: 20px;
+}
+
+.currentTemp {
+  font-size: 35px;
+}
+
+.currentFeelsLike {
+  font-size: 16px;
+}
+
+.currentWind {
+  font-size: 25px;
+}
+
+.currentHumidity {
+  font-size: 25px;
+}
+
+@media (min-width: 768px) and (max-width: 1224px) {
+  .error {
+    font-size: 20px;
+  }
+
+  .inputCityName {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 3px 10px;
+  }
+
+  .inputCityNameNight {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 3px 10px;
+  }
+
+  .searchButton {
+    height: 26px;
+    width: 32px;
+    border-radius: 5px;
+  }
+
+  .searchButtonNight {
+    height: 26px;
+    width: 32px;
+    border-radius: 5px;
+  }
+
+  .positioningInfo {
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  .positioningInfoNight {
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  .textNow {
+    font-size: 14px;
+  }
+
+  .currentTemp {
+    font-size: 35px;
+  }
+
+  .currentWind {
+    font-size: 18px;
+  }
+
+  .currentHumidity {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .error {
+    font-size: 15px;
+    color: red;
+  }
+
+  .positioningInfo {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  .positioningInfoNight {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  .inputCityName {
+    font-size: 10px;
+    border-radius: 3px;
+    padding: 2px 5px;
+    border: solid 0.5px;
+  }
+
+  .inputCityNameNight {
+    font-size: 10px;
+    border-radius: 3px;
+    padding: 2px 5px;
+    border: solid 0.5px;
+  }
+
+  .searchButton {
+    height: 19px;
+    width: 32px;
+    border-radius: 3px;
+    border: solid 0.5px;
+  }
+
+  .searchButtonNight {
+    height: 19px;
+    width: 32px;
+    border-radius: 3px;
+    border: solid #fff 0.5px;
+  }
+
+  .currentDayInfo {
+    padding-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .currentTemp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feelsLike {
+    font-size: 20px;
+  }
+
+  .currentWind {
+    font-size: 14px;
+  }
+
+  .currentHumidity {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 426px) {
+  .todayDay {
+    font-size: 24px;
+  }
+}
+
+/* weatherForFewDays */
+.mainDays {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 180px;
+  border: solid 2px #fff;
+  border-radius: 10px;
+}
+
+.title {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-items: center;
+  padding: 0px 20px;
+  background-color: aliceblue;
+  border-bottom: solid 2px;
+}
+.titleNight {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  justify-items: center;
+  padding: 0px 20px;
+  background: #0000008a;
+  border-bottom: solid 2px;
+  color: #fff;
+}
+
+.titleDate {
+  font-size: 25px;
+}
+
+.content {
+  display: grid;
+  padding: 10px 20px;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 30px;
+  justify-items: center;
+  border-bottom: solid 1px #959595;
+  background: aliceblue;
+  transition: all 1s;
+}
+
+.contentNight {
+  padding: 10px 20px;
+  display: grid;
+  align-items: center;
+  color: #fff;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 30px;
+  border-radius: 5px;
+  background: rgb(59, 59, 59);
+  border-bottom: solid 1px #959595;
+  transition: all 1s;
+}
+
+.monthDate {
+  text-align: center;
+}
+
+.timesofDay {
+  text-align: start;
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 40px;
+}
+
+.fellsLike {
+  font-size: 15px;
+}
+
+.wind {
+  font-size: 20px;
+  text-align: center;
+}
+
+.humidity {
+  font-size: 20px;
+}
+
+@media (max-width: 1441px) {
+  .mainDays {
+    margin: 20px 50px;
+  }
+  .title {
+    gap: 30px;
+    font-size: 14px;
+  }
+  .titleDate {
+    font-size: 14px;
+  }
+  .monthDate {
+    font-size: 14px;
+  }
+  .timesofDay {
+    font-size: 14px;
+  }
+  .temp {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fellsLike {
+    font-size: 12px;
+  }
+  .wind {
+    font-size: 14px;
+  }
+  .humidity {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .mainDays {
+    margin: 20px 50px;
+  }
+  .title {
+    gap: 30px;
+    font-size: 14px;
+  }
+  .titleDate {
+    font-size: 14px;
+  }
+  .monthDate {
+    font-size: 14px;
+  }
+  .timesofDay {
+    font-size: 14px;
+  }
+  .temp {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fellsLike {
+    font-size: 12px;
+  }
+  .wind {
+    font-size: 14px;
+  }
+  .humidity {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 426px) {
+  .mainDays {
+    display: flex;
+    padding: 0px;
+    margin: 0px 10px;
+    align-items: center;
+  }
+  .title {
+    display: none;
+  }
+  .titleDate {
+    font-size: 22px;
+  }
+  .content {
+    padding: 10px 0px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    border: solid #2f4343 1px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+  .contentNight {
+    padding: 10px 0px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    border: solid #2f4343 1px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+  .fellsLike {
+    position: relative;
+    bottom: 15px;
+    font-size: 15px;
+  }
+  .temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* weatherIcon */
+.iconWeather {
+  height: 70px;
+  padding: 10px;
+}
+
+@media (max-width: 1025px) {
+  .iconWeather {
+    height: 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .iconWeather {
+    height: 60px;
+  }
+}
+
+/* footer */
+.footerBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8da58d;
+  min-height: 70px;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.showMore {
+  padding-top: 20px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.showMore:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.showMoreActive {
+  text-decoration: underline;
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.showMoreActive:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.description {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .footerBg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8da58d;
+    height: 40px;
+    font-size: 10px;
+  }
+  .footerText {
+    font-size: 10px;
+  }
 }

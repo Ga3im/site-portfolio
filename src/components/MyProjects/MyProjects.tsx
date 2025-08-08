@@ -28,19 +28,12 @@ export const MyProjects = () => {
 
               <div key={item.id} className={s.projectContent}>
                 <p className={s.siteName}>{item.siteName}</p>
-                {item.URL && (
-                  <p className={s.siteUrl}>
-                    Сайт:
-                    <a className={s.urlText} target="_blank" href={item.URL}>
-                      {item.URL}
-                    </a>
-                  </p>
-                )}
 
                 {item.gitHubURL && (
                   <p className={s.siteUrl}>
                     GitHUB:
                     <a
+                      onClick={(e)=> e.stopPropagation()}
                       className={s.urlText}
                       target="_blank"
                       href={item.gitHubURL}
